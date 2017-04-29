@@ -153,12 +153,12 @@ module.exports = {
     // `pkg` indicates the data in `package.json`
     title: pkg.productName || pkg.name,
     description: pkg.description,
-    template: // defaults to $cwd/index.html if it exists, otherwise use built-in template
+    template: // defaults to $cwd/index.ejs if it exists, otherwise use built-in template
   }
 }
 ```
 
-Check out the [built-in template](https://github.com/egoist/poi/blob/master/packages/poi/lib/index.html) file we use. To disable generating html file, you can set `html` to `false`.
+Check out the [built-in template](https://github.com/egoist/poi/blob/master/packages/poi/lib/index.ejs) file we use. To disable generating html file, you can set `html` to `false`.
 
 The options for html-webpack-plugin are available in template file as `htmlWebpackPlugin.options` and you can use `htmlWebpackPlugin.options.pkg` to access the data of `package.json`.
 
