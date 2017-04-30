@@ -15,7 +15,7 @@ module.exports = {
 
 If you're using `package.json` as config file, you can:
 
-```json
+```js
 {
   "poi": {
     "presets": [
