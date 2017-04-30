@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://ooo.0o0.ooo/2017/04/29/59045594e0617.png" alt="preview" />
+  <img src="https://ooo.0o0.ooo/2017/04/30/5905ba6f1f3ee.png" alt="preview" />
 </p>
 
 ## Badges
@@ -9,15 +9,17 @@
 ## tl;dr
 
 ```bash
-poi whatever.js
-# it just works
+poi src/index.js
+# Run src/index.js in development mode
+poi build src/index.js
+# Build src/index.js in production mode
 ```
 
 Develop web apps with no build configuration until you need.
 
 ## Config file
 
-All CLI options and advanced options can be set here:
+All CLI options and config can be set here:
 
 ```js
 module.exports = (options, req) => ({
@@ -26,10 +28,10 @@ module.exports = (options, req) => ({
 })
 
 // Note that you can directly export an object too:
-// module.exports = { devServer: { port: 5000 } }
+// module.exports = { port: 5000 }
 ```
 
-By default it will load `poi.config.js` if it exists. To change the path, you can add `--config [path]` in CLI arguments. 
+By default the CLI will load `poi.config.js` if it exists. To change the path, you can add `--config [path]` in CLI arguments. 
 
 You can also use `.poirc` or set `poi` property in `package.json` when you only need JSON for configurations. See [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) for all the supported config files.
 
@@ -51,9 +53,9 @@ The `require` function but context directory is the path to `node_modules/poi/li
 
 ### Babel
 
-JS files and `script` tags in single-file components are transpiled by Babel. We only use one preset by default: [babel-preset-vue-app](https://github.com/egoist/babel-preset-vue-app).
+JS files and `script` tags in Vue single-file components are transpiled by Babel. We only use one preset by default: [babel-preset-vue-app](https://github.com/egoist/babel-preset-vue-app).
 
-poi will use `.babelrc` if it exists, you can also set `babelrc` option in config file to disable itself, check out [full reference](https://babeljs.io/docs/usage/api/#options) for `babel` option.
+poi will use `.babelrc` if it exists, you can also set `babelrc` option in config file to disable itself, check out [related babel docs](https://babeljs.io/docs/usage/api/#options).
 
 Feel free to use [babel-preset-react-app](https://github.com/facebookincubator/create-react-app/blob/master/packages/babel-preset-react-app) or [babel-preset-preact-app](https://github.com/developit/babel-preset-preact) and so on to work with other frameworks.
 
@@ -68,6 +70,8 @@ module.exports = {
   autoprefixer: {
     browsers: ['ie > 8', 'last 3 versions']
   }
+  // to disable autoprefixer
+  // autoprefixer: false
 }
 ```
 
@@ -77,7 +81,7 @@ You can use PostCSS config file like `postcss.config.js` or whatever [postcss-lo
 
 Supported preprocessors: `sass` `scss` `stylus` `less`, the workflow of CSS is `custom css preprocessor` -> `postcss-loader` -> `css-loader`.
 
-To use a custom CSS preprocessor, you can directly install relevant loader and dependency. For example, to use `scss`:
+To use a custom CSS preprocessor, you can directly install relevant loader and dependency. For example, to import `.scss` files:
 
 ```bash
 yarn add node-sass sass-loader --dev
@@ -101,7 +105,8 @@ Besides this, single-file component (hot reload, preprocessors, css extraction) 
 
 ### Webpack entry
 
-Type: `string` `Array` `Object`
+Type: `string` `Array` `Object`<br>
+Default: `index.js`
 
 You can set webpack entry from CLI option or `entry` property in config file. If it's an array or string, we add it into `webpackConfig.entry.client` entry, otherwise it will totally override `webpackConfig.entry`
 
@@ -111,6 +116,13 @@ You can set webpack entry from CLI option or `entry` property in config file. If
 
 We enabled code splitting for vendor code and app code by default in production mode, you can set `vendor` option to `false` to disable it. And by default all required modules in `node_modules` will be split.
 
+To lazy-load components, you can use [dynamic import](https://webpack.js.org/guides/code-splitting-async/#dynamic-import-import-) syntax:
+
+```js
+const Home = import('./views/homepage')
+// This returns a Promise
+```
+
 [⬆ back to top](#app)
 
 ### Webpack
@@ -118,6 +130,7 @@ We enabled code splitting for vendor code and app code by default in production 
 You can directly mutate webpack config via `webpack` options:
 
 ```js
+// poi.config.js
 module.exports = {
   webpack(config) {
     config.plugins.push(new MyWebpackPlugin())
@@ -153,7 +166,8 @@ module.exports = {
     // `pkg` indicates the data in `package.json`
     title: pkg.productName || pkg.name,
     description: pkg.description,
-    template: // defaults to $cwd/index.ejs if it exists, otherwise use built-in template
+    template: '', // Defaults to $cwd/index.ejs if it exists, otherwise use built-in template
+    pkg: {} // All package.json data
   }
 }
 ```
@@ -166,12 +180,12 @@ The options for html-webpack-plugin are available in template file as `htmlWebpa
 
 ### Custom output filename
 
-Set custom filename for js css static files:
+Set custom filename for js, css, static files:
 
 ```js
 module.exports = {
   filename: {
-    js: 'index.js',
+    js: '[name].[chunkhash:8].js',
     css: 'style.css',
     static: 'static/[name].[ext]',
     chunk: '[id].chunk.js'
@@ -187,7 +201,7 @@ The `extractCSS` option is `true` by default in production mode, however you can
 
 ```js
 module.exports = {
-  // always disable extracting css
+  // Always disable extracting css
   extractCSS: false
 }
 ```
@@ -219,7 +233,7 @@ module.exports = {
 }
 ```
 
-The value of each env variable is automatically stringified and passed down to [webpack.DefinePlugin](https://webpack.js.org/plugins/define-plugin/).
+The value of each env variable is automatically stringified and passed to [webpack.DefinePlugin](https://webpack.js.org/plugins/define-plugin/).
 
 In your app:
 
