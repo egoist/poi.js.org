@@ -40,23 +40,11 @@ module.exports = options => {
 }
 ```
 
-### poi.command
+### poi.mode
 
-Type: `function`
+The mode in where you're running.
 
-Run actions in specified command:
-
-```js
-poi.command('dev', () => {
-  console.log('This is in "poi dev" command')
-})
-
-poi.command(['build', 'watch'], () => {
-  console.log('This is in default and "watch" command')
-})
-```
-
-If the command action is asynchonous, it should return a Promise.
+Possible values: `development` `production` `watch` `test`
 
 ### poi.webpackConfig
 
