@@ -110,6 +110,8 @@ Default: `index.js`
 
 You can set webpack entry from CLI option or `entry` property in config file. If it's an array or string, we add it into `webpackConfig.entry.client` entry, otherwise it will totally override `webpackConfig.entry`
 
+It could also be a special keyword: `[hot]`, we will replace this with the dev client for hot reloading.
+
 [⬆ back to top](#app)
 
 ### Code splitting
