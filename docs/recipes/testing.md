@@ -2,7 +2,7 @@
 
 ## Unit testing
 
-[TODO]
+You can use [poi-preset-karma](https://github.com/egoist/poi/blob/master/packages/poi-preset-karma/README.md).
 
 ## E2E testing
 

@@ -40,11 +40,21 @@ module.exports = options => {
 }
 ```
 
-### poi.mode
+### poi.mode(mode, middleware)
 
-The mode in where you're running.
+Add a middleware to specified mode or modes.
 
-Possible values: `development` `production` `watch` `test`
+#### mode
+
+Type: `string` `Array`
+
+Possible values: `dev` `prod` `watch` `test` `*`
+
+#### middleware
+
+Type: `function`
+
+It can be a synchronous, asynchronous, or generator function. (it can also return a Promise)
 
 ### poi.webpackConfig
 
@@ -57,4 +67,12 @@ The data of `package.json` in user's project.
 ### poi.options
 
 Same as the `options` in `poi.config.js`, it's the result of CLI options merged with config file, and CLI options takes higher priority.
+
+### poi.merge
+
+Bascially `lodash.merge`
+
+### poi.argv
+
+Parsed CLI arguments.
 
