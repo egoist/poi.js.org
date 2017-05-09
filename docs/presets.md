@@ -48,7 +48,7 @@ Add a middleware to specified mode or modes.
 
 Type: `string` `Array`
 
-Possible values: `dev` `prod` `watch` `test` `*`
+Possible values: `development` `production` `watch` `test` `*`
 
 #### middleware
 
