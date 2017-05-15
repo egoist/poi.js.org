@@ -4,16 +4,21 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta name="description" content="Rapid web development">
   <title>Poi</title>
-  <!-- the docute client styles -->
-  <link rel="stylesheet" href="https://unpkg.com/docute@3/dist/docute.css">
-  <link rel="stylesheet" href="https://unpkg.com/docute@3/dist/theme-github.css">
+  <link href="https://fonts.css.network/css?family=Inconsolata" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docute@3.4.7/dist/docute.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docute@3.4.7/dist/theme-github.css">
+  <link rel="stylesheet" href="./assets/override.css">
 </head>
 <body>
   <div id="app"></div>
-  <script src="https://unpkg.com/docute@3/dist/docute.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/malarkey@1.3.3/dist/malarkey.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docute@3.4.7/dist/docute.js"></script>
+  <script src="./assets/landing.js"></script>
   <script>
     docute.init({
+      landing: true,
       announcement: {
         type: 'primary',
         html: '<a style="margin-right:10px;" class="docute-button docute-button-mini docute-button-primary" href="https://github.com/egoist/donate" target="_blank">Donate!</a> Support Poi development by becoming a patron or one-time donation.'
@@ -21,10 +26,14 @@
       repo: 'egoist/poi',
       twitter: 'poijs',
       'edit-link': 'https://github.com/egoist/poi/blob/master/docs',
+      plugins: [landingPlugin],
       nav: {
         default: [{
-          title: 'Guide',
+          title: 'Home',
           path: '/'
+        }, {
+          title: 'Guide',
+          path: '/home'
         }, {
           title: 'Options',
           path: '/options'

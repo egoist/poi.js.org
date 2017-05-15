@@ -35,21 +35,15 @@ By default the CLI will load `poi.config.js` if it exists. To change the path, y
 
 You can also use `.poirc` or set `poi` property in `package.json` when you only need JSON for configurations. See [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) for all the supported config files.
 
-[⬆ back to top](#app)
-
 ### Arguments
 
 #### options
 
 CLI options.
 
-[⬆ back to top](#app)
-
 #### req
 
 The `require` function but context directory is the path to `node_modules/poi/lib`, which means you can use it to load poi's dependencies, like `webpack`.
-
-[⬆ back to top](#app)
 
 ### Babel
 
@@ -58,8 +52,6 @@ JS files and `script` tags in Vue single-file components are transpiled by Babel
 poi will use `.babelrc` if it exists, you can also set `babelrc` option in config file to disable itself, check out [related babel docs](https://babeljs.io/docs/usage/api/#options).
 
 Feel free to use [babel-preset-react-app](https://github.com/facebookincubator/create-react-app/blob/master/packages/babel-preset-react-app) or [babel-preset-preact-app](https://github.com/developit/babel-preset-preact) and so on to work with other frameworks.
-
-[⬆ back to top](#app)
 
 ### PostCSS
 
@@ -93,15 +85,11 @@ To use CSS modules in single-file component, you can set `module` attribute in `
 
 To use CSS modules in standalone css files, you can set `cssModules` to `true` in config file.
 
-[⬆ back to top](#app)
-
 ### Vue
 
 As a fact that we're using `babel-preset-vue-app` by default, you will have built-in support for Vue JSX.
 
 Besides this, single-file component (hot reload, preprocessors, css extraction) is fully supported.
-
-[⬆ back to top](#app)
 
 ### Webpack entry
 
@@ -111,8 +99,6 @@ Default: `index.js`
 You can set webpack entry from CLI option or `entry` property in config file. If it's an array or string, we add it into `webpackConfig.entry.client` entry, otherwise it will totally override `webpackConfig.entry`
 
 It could also be a special keyword: `[hot]`, we will replace this with the dev client for hot reloading.
-
-[⬆ back to top](#app)
 
 ### Code splitting
 
@@ -124,8 +110,6 @@ To lazy-load components, you can use [dynamic import](https://webpack.js.org/gui
 const Home = import('./views/homepage')
 // This returns a Promise
 ```
-
-[⬆ back to top](#app)
 
 ### Webpack
 
@@ -154,8 +138,6 @@ module.exports = {
 
 Using webpack-chain is more verbose but you gain more control with it.
 
-[⬆ back to top](#app)
-
 ### Custom HTML output
 
 Type: `Object` `Array` `boolean`
@@ -178,8 +160,6 @@ Check out the [built-in template](https://github.com/egoist/poi/blob/master/pack
 
 The options for html-webpack-plugin are available in template file as `htmlWebpackPlugin.options` and you can use `htmlWebpackPlugin.options.pkg` to access the data of `package.json`.
 
-[⬆ back to top](#app)
-
 ### Custom output filename
 
 Set custom filename for js, css, static files:
@@ -195,8 +175,6 @@ module.exports = {
 }
 ```
 
-[⬆ back to top](#app)
-
 ### Extracting CSS
 
 The `extractCSS` option is `true` by default in production mode, however you can also set it manually to overrde:
@@ -208,13 +186,9 @@ module.exports = {
 }
 ```
 
-[⬆ back to top](#app)
-
 ### Copy static files
 
 By default, all files inside `./static` folder will be copied to dist folder, you can set `copy` to `false` to disable this.
-
-[⬆ back to top](#app)
 
 ### Define env variables
 
@@ -250,8 +224,6 @@ In template html file which uses [lodash.template](https://lodash.com/docs/4.17.
 <meta name="description" content="<%= htmlWebpackPlugin.options.env.APP_DESCRIPTION %>" />
 ```
 
-[⬆ back to top](#app)
-
 ### Proxy API request
 
 To tell the development server to serve any `/api/*` request to your API server in development, use the `proxy` options:
@@ -283,8 +255,6 @@ module.exports = {
 
 Keep in mind that proxy only has effect in development.
 
-[⬆ back to top](#app)
-
 ### Dev server
 
 #### port
@@ -301,8 +271,6 @@ Default: `localhost`
 
 Host of dev server.
 
-[⬆ back to top](#app)
-
 ### Custom server logic
 
 Perform some custom logic to development server:
@@ -316,5 +284,3 @@ module.exports = {
   }
 }
 ```
-
-[⬆ back to top](#app)

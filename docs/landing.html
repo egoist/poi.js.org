@@ -1,0 +1,226 @@
+<div class="landing-main flex-center">
+  <div class="landing-main-center flex-center">
+    <h1 class="site-name">
+      <span>P</span>
+      <span>O</span>
+      <span>I</span>
+    </h1>
+
+    <h2 class="site-slogan">
+      Rapid web development for <span id="kinds"></span>
+    </h2>
+  </div>
+
+  <div class="landing-buttons">
+    <a 
+      router-link="/home" 
+      class="docute-button" 
+      style="margin-right:20px">
+      Get Started
+    </a>
+    <a 
+      href="https://github.com/egoist/poi"
+      target="_blank" 
+      class="docute-button">
+      GitHub
+    </a>
+  </div>
+</div>
+
+<div class="landing-intro">
+  <div class="landing-intro-box">
+    <h3>Config-free</h3>
+    <div class="intro-content">
+      Develop powerful web app with no build configs until you need.
+    </div>
+  </div>
+  <div class="landing-intro-box">
+    <h3>Versatile</h3>
+    <div class="intro-content">
+      You can use Poi to build web apps, distribute resuable components, bundle Electron apps et al.
+    </div>
+  </div>
+  <div class="landing-intro-box">
+    <h3>Extensive</h3>
+    <div class="intro-content">
+      Poi comes with best practices but you can still extend it to any shape you like via config file or Node.js API.
+    </div>
+  </div>
+</div>
+
+<div class="landing-me">
+  <a class="avatar" href="https://github.com/egoist" target="_blank">
+    <div class="avatar-src"></div>
+  </a>
+  <h3>Made By EGOIST</h3>
+  <p>
+    A Vue.js core team member who has dedicated a lot of time into making developing web app fun and easy.
+  </p>
+</div>
+
+<style>
+  .landing {
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+  }
+
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .landing-main {
+    flex-direction: column;
+    height: 600px;
+    justify-content: space-around;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .landing-main-center {
+    flex-direction: column;
+  }
+
+  .site-name {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .site-name span {
+    border: 1px dashed;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all .3s ease;
+    cursor: default;
+  }
+
+  .site-name span:hover {
+    background-color: #000;
+    color: white;
+    transform: rotate(-45deg);
+  }
+
+  .site-slogan {
+    font-weight: 300;
+  }
+
+  .landing a:hover {
+    text-decoration: none;
+  }
+
+  .landing-buttons {
+    margin: 20px 0;
+    margin-top: 40px;
+  }
+
+  .landing-buttons a {
+    background-color: transparent;
+    color: inherit;
+    padding: 10px 0;
+    width: 140px;
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .landing-intro {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .landing-intro-box {
+    padding: 0 20px;
+    flex: 1;
+  }
+
+  .landing-intro-box h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .landing-intro-box .intro-content {
+    font-size: 17px;
+  }
+
+  .landing-me {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+  .landing-me h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .landing-me p {
+    font-size: 18px;
+    max-width: 600px;
+    padding: 10px;
+  }
+
+  .avatar {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    border: 1px dashed #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .avatar:hover {
+    border-color: #999;
+  }
+
+  .avatar:hover:before {
+    content: '🌟';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    font-size: 20px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  .avatar-src {
+    background-color: #ccc;
+    background-image: url(https://avatars0.githubusercontent.com/u/8784712?v=3&s=460);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media screen and (max-width: 768px) {
+    .landing-main {
+      height: 400px;
+    }
+
+    .landing-intro {
+      flex-direction: column;
+    }
+
+    .landing-buttons a {
+      padding: 5px 0;
+      /*width: 80px;*/
+      font-size: 14px;
+      margin-right: 0 !important;
+    }
+  }
+</style>
