@@ -98,7 +98,7 @@ filename: {
 
 ### copy
 
-Type: `boolean`<br>
+Type: `boolean` `object` `Array`<br>
 Default: `true`
 
 Options for [copy-webpack-plugin](https://github.com/kevlened/copy-webpack-plugin), by default it will copy `static/*` to `dist/*`
