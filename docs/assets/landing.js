@@ -7,7 +7,7 @@ var landingPlugin = function (ctx) {
         var elem = document.getElementById('kinds')
         var opts = {
           typeSpeed: 50,
-          deleteSpeed: 50,
+          deleteSpeed: 30,
           pauseDelay: 2000,
           loop: true,
           postfix: ''
