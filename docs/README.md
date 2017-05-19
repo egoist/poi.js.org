@@ -122,7 +122,7 @@ module.exports = {
 }
 ```
 
-Set `polyfills: false` to disable it, [more details](/options#polyfills).
+[More details](/options#polyfills).
 
 ### Webpack
 
