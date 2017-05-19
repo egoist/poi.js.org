@@ -113,7 +113,7 @@ const Home = import('./views/homepage')
 
 ### Polyfills
 
-By default only `window.Promise` and `Object.assign` are polyfill-ed, you can add polyfills to `polyfills` option:
+By default only `window.Promise` and `Object.assign` are polyfill-ed, you can use `polyfills` option to override it:
 
 ```js
 // poi.config.js
