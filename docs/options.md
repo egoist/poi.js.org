@@ -63,6 +63,13 @@ Default: `false`
 
 Process CSS using [css modules](https://github.com/css-modules/css-modules).
 
+### polyfills
+
+Type: `Array`<br>
+Default: `[require.resolve('web-polyfill')]`
+
+Add a `polyfills` entry which includes specific polyfills, the default `web-polyfill` only adds `window.Promise` and `Object.assign` polyfills.
+
 ### html
 
 Type: `Object` `Array` `boolean`

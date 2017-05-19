@@ -111,6 +111,19 @@ const Home = import('./views/homepage')
 // This returns a Promise
 ```
 
+### Polyfills
+
+By default only `window.Promise` and `Object.assign` are polyfill-ed, you can add polyfills to `polyfills` option:
+
+```js
+// poi.config.js
+module.exports = {
+  polyfills: ['/path/to/my-polyfill']
+}
+```
+
+Set `polyfills: false` to disable it, [more details](/options#polyfills).
+
 ### Webpack
 
 You can directly mutate webpack config via `webpack` options:
