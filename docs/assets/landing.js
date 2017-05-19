@@ -13,7 +13,8 @@ var landingPlugin = function (ctx) {
           postfix: ''
         }
         malarkey(elem, opts)
-          .type('Front-end apps').pause().delete()
+          .type('Front-end App').pause().delete()
+          .type('Progressive Web App').pause().delete()
           .type('Vue.js').pause().delete()
           .type('React et al').pause().delete()
           .type('Babel and PostCSS').pause().delete()
