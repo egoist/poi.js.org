@@ -65,10 +65,10 @@ Process CSS using [css modules](https://github.com/css-modules/css-modules).
 
 ### polyfills
 
-Type: `Array`<br>
-Default: `['built in']`
+Type: `Array` `boolean`<br>
+Default: `undefined`
 
-Add a `polyfills` entry which includes specific polyfills, the default [polyfill](https://github.com/egoist/poi/blob/master/packages/poi/app/polyfills.es6) only adds `window.Promise` and `Object.assign` polyfills.
+Add a `polyfills` entry which includes specific polyfills, when it's `true` the default [polyfill](https://github.com/egoist/poi/blob/master/packages/poi/app/polyfills.es6) will add `window.Promise` and `Object.assign` polyfills.
 
 ### html
 
