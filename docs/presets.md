@@ -1,5 +1,7 @@
 # Presets
 
+Check out all available presets: https://github.com/egoist/poi/tree/master/packages
+
 ## Use a preset
 
 You can use preset with or without options:

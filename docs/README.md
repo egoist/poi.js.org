@@ -17,6 +17,15 @@ poi build src/index.js
 
 Develop web apps with no build configuration until you need.
 
+## Modes
+
+There're **four** modes:
+
+- `poi`: Default command, build app in `production` mode
+- `poi dev`: Run app in `development` mode
+- `poi test`: By default it does nothing, but you can use it with some presets.
+- `poi watch`: Run app in webpack's `watch` mode
+
 ## Config file
 
 All CLI options and config can be set here:

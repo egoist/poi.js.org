@@ -70,6 +70,17 @@ Default: `undefined`
 
 Add a `polyfills` entry which includes specific polyfills, when it's `true` the default [polyfill](https://github.com/egoist/poi/blob/master/packages/poi/app/polyfills.es6) will add `window.Promise` and `Object.assign` polyfills.
 
+### extractCSS
+
+Type: `boolean`<br>
+Default: `false`
+
+Extract CSS into a single file.
+
+<p class="warning">
+  It defaults to `true` in production mode.
+</p>
+
 ### html
 
 Type: `Object` `Array` `boolean`
@@ -198,13 +209,6 @@ Type: `boolean`<br>
 Default: `true`
 
 Minimize JS and CSS files.
-
-### extractCSS
-
-Type: `boolean`<br>
-Default: `true`
-
-Extract CSS into a single file.
 
 ### homepage
 
