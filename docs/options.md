@@ -11,6 +11,10 @@ Default: value of pkg.main or `index.js`
 
 The path to entry file.
 
+Speicial keywords:
+
+- `:hot:`: Use this keyword to insert HMR entry.
+
 ### dist
 
 Type: `string`<br>
