@@ -106,7 +106,7 @@ To use CSS modules in single-file component, you can set `module` attribute in `
 </style>
 ```
 
-#### Stanalone CSS files
+#### Standalone CSS files
 
 Files ending with `.module.css` `.module.scss` `.module.less` etc also support CSS modules by default.
 
