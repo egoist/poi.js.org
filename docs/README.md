@@ -92,7 +92,7 @@ yarn add node-sass sass-loader --dev
 
 #### Single-file component
 
-To use CSS modules in single-file component, you can set `module` attribute in `<style></style>` tag.
+To use CSS modules in single-file component, you can set `module` attribute on `<style></style>` tag.
 
 ```vue
 <template>
