@@ -78,7 +78,7 @@ module.exports = {
 
 You can use PostCSS config file like `postcss.config.js` or whatever [postcss-load-config](https://github.com/michael-ciniawsky/postcss-load-config) supports. `postcss` option is also available in config file.
 
-#### Custom CSS preprocessors
+### Custom CSS preprocessors
 
 Supported preprocessors: `sass` `scss` `stylus` `less`, the workflow of CSS is `custom css preprocessor` -> `postcss-loader` -> `css-loader`.
 
@@ -88,11 +88,29 @@ To use a custom CSS preprocessor, you can directly install relevant loader and d
 yarn add node-sass sass-loader --dev
 ```
 
-#### CSS modules
+### CSS modules
+
+#### Single-file component
 
 To use CSS modules in single-file component, you can set `module` attribute in `<style></style>` tag.
 
-To use CSS modules in standalone css files, you can set `cssModules` to `true` in config file.
+```vue
+<template>
+  <div :class="$style.foo">hi</div>
+</template>
+
+<style module>
+  .foo {
+    color: red;
+  }
+</style>
+```
+
+#### Stanalone CSS files
+
+Files ending with `.module.css` `.module.scss` `.module.less` etc also support CSS modules by default.
+
+To enable CSS modules for all CSS files, set `cssModules: true` in config file.
 
 ### Vue
 
