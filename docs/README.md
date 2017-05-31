@@ -21,8 +21,8 @@ Develop web apps with no build configuration until you need.
 
 There're **four** modes:
 
-- `poi`: Default command, build app in `production` mode
-- `poi dev`: Run app in `development` mode with hot reloading
+- `poi`: Default command, run app in `development` mode
+- `poi build`: Build app in `production` mode
 - `poi test`: The `test` mode, by default it does nothing, but you can use it with some presets.
 - `poi watch`: Run app in webpack's `watch` mode
 
