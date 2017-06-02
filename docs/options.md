@@ -72,7 +72,7 @@ Process CSS using [css modules](https://github.com/css-modules/css-modules).
 Type: `Array` `boolean`<br>
 Default: `undefined`
 
-Add a `polyfills` entry which includes specific polyfills, when it's `true` the default [polyfill](https://github.com/egoist/poi/blob/master/packages/poi/app/polyfills.es6) will add `window.Promise` and `Object.assign` polyfills.
+Add a `polyfills` entry which includes specific polyfills, when it's `true` the default [polyfill](https://github.com/egoist/web-polyfill) will add `window.Promise` and `Object.assign` polyfills.
 
 ### extractCSS
 
