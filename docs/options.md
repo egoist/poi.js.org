@@ -221,6 +221,15 @@ Default: `/`
 
 The path to load resource from, it's useful when your site is located at a subpatch like `http://example.com/blog`, you need to set `homepage` to `/blog/` in this situation.
 
+### removeDist
+
+Type: `boolean`<br>
+Default: `undefined`
+
+In production mode, we will remove `dist/*` by default when the generated files contain hash like `vendor.f8rbdf92.js`. And there's hash by default for long-term caching purpose.
+
+To disable this, you can set it to `false`, to always enable this even if the filename does not contain hash, you can set it to `true`.
+
 ## Development
 
 ### port
