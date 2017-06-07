@@ -240,7 +240,7 @@ Default: `4000`
 ### host
 
 Type: `string`<br>
-Default: `localhost`
+Default: `0.0.0.0`
 
 ### setupDevServer
 
