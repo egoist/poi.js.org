@@ -219,7 +219,7 @@ Minimize JS and CSS files.
 Type: `string`<br>
 Default: `/`
 
-The path to load resource from, it's useful when your site is located at a subpatch like `http://example.com/blog`, you need to set `homepage` to `/blog/` in this situation.
+The path to load resource from, it's useful when your site is located at a sub pach like `http://example.com/blog`, you need to set `homepage` to `/blog/` or `http://example.com/blog/` in this situation.
 
 ### removeDist
 
