@@ -42,25 +42,30 @@ module.exports = options => {
 }
 ```
 
-### poi.mode(mode, middleware)
+### poi.extendWebpack(mode, handler)
 
-Add a middleware to specified mode or modes.
+Add a handler to manipulate webpack-chain instance in specific modes.
 
 #### mode
 
-Type: `string` `Array`
+Type: `string` `Array`<br>
+Optional: `true`
 
 Possible values: `development` `production` `watch` `test` `*`
 
-#### middleware
+#### handler
 
-Type: `function`
+Type: `function`<br>
+Required: `true`
 
-It can be a synchronous, asynchronous, or generator function. (it can also return a Promise)
+A handler function which you can use to manipulate webpack-chain instance, eg:
 
-### poi.webpackConfig
-
-This is a [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain) instance, you can use it to modify webpack config.
+```js
+poi.extendWebpack('production', config => {
+  // Remove progress bar in production mode
+  config.plugins.delete('progress-bar')
+})
+```
 
 ### poi.manifest
 

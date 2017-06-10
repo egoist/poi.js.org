@@ -13,7 +13,7 @@ The path to entry file.
 
 Speicial keywords:
 
-- `:hot:`: Use this keyword to insert HMR entry.
+- `:hot:`: Use this keyword to insert HMR entry. (only take effect in development mode)
 
 ### dist
 
