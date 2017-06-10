@@ -8,6 +8,10 @@ const app = poi({
 })
 ```
 
+<p class="tip">
+  Note that when you're using the API interface, Poi would not load external config files like `poi.config.js` `.babelrc` etc.
+</p>
+
 ## API
 
 ### poi(options)
