@@ -11,10 +11,6 @@ Default: value of pkg.main or `index.js`
 
 The path to entry file.
 
-Speicial keywords:
-
-- `:hot:`: Use this keyword to insert HMR entry. (only take effect in development mode)
-
 ### dist
 
 Type: `string`<br>
@@ -266,3 +262,10 @@ Type: `boolean`<br>
 Default: `true`
 
 Enable Hot Mode Reloading.
+
+### hotEntry
+
+Type: `string` `Array`<br>
+Default: `client`
+
+Add hot reload support to specific entries.

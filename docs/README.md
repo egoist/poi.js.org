@@ -125,8 +125,6 @@ Default: `index.js`
 
 You can set webpack entry from CLI option or `entry` property in config file. If it's an array or string, we add it into `webpackConfig.entry.client` entry, otherwise it will totally override `webpackConfig.entry`
 
-It could also be a special keyword: `:hot:`, we will replace this with the dev client for hot reloading.
-
 ### Code splitting
 
 We enabled code splitting for vendor code and app code by default in production mode, you can set `vendor` option to `false` to disable it. And by default all required modules in `node_modules` will be split.
