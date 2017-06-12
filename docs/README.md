@@ -153,7 +153,7 @@ module.exports = {
 
 ### Webpack
 
-You can directly mutate webpack config via `webpack` options:
+You can directly mutate webpack config via `webpack` option:
 
 ```js
 // poi.config.js
