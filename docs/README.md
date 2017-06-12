@@ -123,7 +123,7 @@ Besides this, single-file component (hot reload, preprocessors, css extraction) 
 Type: `string` `Array` `Object`<br>
 Default: `index.js`
 
-You can set webpack entry from CLI option or `entry` property in config file. If it's an array or string, we add it into `webpackConfig.entry.client` entry, otherwise it will totally override `webpackConfig.entry`
+You can set webpack entry from CLI option or `entry` property in config file. If it's an array or string, we add it into `webpackConfig.entry.client` entry, otherwise it will entirely override `webpackConfig.entry`
 
 ### Code splitting
 
