@@ -242,11 +242,17 @@ Default: `4000`
 Type: `string`<br>
 Default: `0.0.0.0`
 
+### devServer
+
+Type: `object`
+
+Options for [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware).
+
 ### setupDevServer
 
 Type: `function`
 
-See [custom server login](/#custom-server-logic) for usages.
+See [custom server logic](/#custom-server-logic) for usages.
 
 ### proxy
 
