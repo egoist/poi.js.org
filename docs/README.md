@@ -295,19 +295,16 @@ Keep in mind that proxy only has effect in development.
 
 ### Dev server
 
-#### port
+Basially it supported all options that're not marked as `CLI only` in [`webpack-dev-server`](https://webpack.js.org/configuration/dev-server/#devserver):
 
-Type: `number`<br>
-Default: `4000`
-
-Port of dev server.
-
-#### host
-
-Type: `string`<br>
-Default: `localhost`
-
-Host of dev server.
+```js
+module.exports = {
+  devServer: {
+    // eg: serve app over HTTPS
+    https: true
+  }
+}
+```
 
 ### Custom server logic
 
