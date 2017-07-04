@@ -295,7 +295,7 @@ Keep in mind that proxy only has effect in development.
 
 ### Dev server
 
-Basially it supported all options that're not marked as `CLI only` in [`webpack-dev-server`](https://webpack.js.org/configuration/dev-server/#devserver):
+Basially it supports all options that're not marked as `CLI only` in [`webpack-dev-server`](https://webpack.js.org/configuration/dev-server/#devserver):
 
 ```js
 module.exports = {
