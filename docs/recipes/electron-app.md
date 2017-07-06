@@ -8,7 +8,10 @@ module.exports = {
   webpack(config) {
     config.target = 'electron-renderer'
     return config
-  }
+  },
+  // In packaged app
+  // Electron can only load files from relative path
+  homepage: './'
 }
 ```
 
