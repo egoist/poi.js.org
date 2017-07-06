@@ -23,7 +23,7 @@ module.exports = {
 }
 ```
 
-Then in the entry file of Electron's main process, you need to load corresponding `index.html` of renderer process for different mode:
+Then in the entry file of [Electron's main process](https://github.com/electron/electron-quick-start/blob/master/main.js), you need to load corresponding `index.html` of renderer process for different mode:
 
 ```js
 const isDev = require('electron-is-dev')
