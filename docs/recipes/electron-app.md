@@ -1,6 +1,6 @@
 # Electron app
 
-Basially you need to set `target: 'electron-renderer'` to exclude built-in Electron modules from your bundle:
+Basically you need to set `target: 'electron-renderer'` for webpack to exclude built-in Electron modules from your bundle:
 
 ```js
 // poi.config.js
