@@ -63,13 +63,6 @@ Default: `false`
 
 Process CSS using [css modules](https://github.com/css-modules/css-modules).
 
-### polyfills
-
-Type: `Array` `boolean`<br>
-Default: `undefined`
-
-Add a `polyfills` entry which includes specific polyfills, when it's `true` the default [polyfill](https://github.com/egoist/web-polyfill) will add `window.Promise` and `Object.assign` polyfills.
-
 ### extractCSS
 
 Type: `boolean`<br>

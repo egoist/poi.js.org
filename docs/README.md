@@ -138,13 +138,22 @@ const Home = import('./views/homepage')
 
 ### Polyfills
 
-You can set `polyfills: true` to polyfill `window.Promise` and `Object.assign`, you can also use your own polyfills:
+By default Poi does not polyfill anything! So you need to import required polyfills at the top of your app entry, let's include the polyfills we need at `src/polyfills.js`:
 
 ```js
-// poi.config.js
-module.exports = {
-  polyfills: ['/path/to/my-polyfill']
+Object.assign = require('object-assign')
+
+if (!window.Promise) {
+  window.Promise = require('promise-polyfill')
 }
+```
+
+Then you can import it at the top of your app entry `src/index.js`:
+
+```js
+import './polyfills'
+
+// ...app code
 ```
 
 [More details](/options#polyfills).
