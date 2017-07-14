@@ -138,7 +138,7 @@ const Home = import('./views/homepage')
 
 ### Polyfills
 
-By default Poi does not polyfill anything! So you need to import required polyfills at the top of your app entry, let's include the polyfills we need at `src/polyfills.js`:
+By default Poi does not polyfill anything! So you need to import required polyfills, let's include the polyfills we need at `src/polyfills.js` first:
 
 ```js
 Object.assign = require('object-assign')
