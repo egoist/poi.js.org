@@ -315,16 +315,18 @@ module.exports = {
 }
 ```
 
-### Custom server logic
+#### Custom server logic
 
-Perform some custom logic to development server:
+This is supported by webpack-dev-server, so simply do:
 
 ```js
 module.exports = {
-  setupDevServer(app) {
-    app.get('/api', (req, res) => {
-      res.end('This is the API')
-    })
+  devServer: {
+    setup(app) {
+      app.get('/api', (req, res) => {
+        res.end('This is the API')
+      })
+    }
   }
 }
 ```
