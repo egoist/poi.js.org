@@ -241,13 +241,13 @@ Options for [webpack-dev-middleware](https://github.com/webpack/webpack-dev-midd
 
 Type: `function`
 
-See [custom server logic](/#custom-server-logic) for usages.
+See [custom server logic](/home#custom-server-logic) for usages.
 
 ### proxy
 
 Type: `string` `object`
 
-See [proxy api request](/#proxy-api-request) for usages.
+See [proxy api request](/home#proxy-api-request) for usages.
 
 ### hotReload
 
