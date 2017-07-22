@@ -107,6 +107,12 @@ filename: {
 }
 ```
 
+### vue
+
+Type: `object`
+
+Provide custom options for `vue-loader`.
+
 ### copy
 
 Type: `boolean` `object` `Array`<br>
