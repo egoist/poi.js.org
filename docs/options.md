@@ -241,19 +241,7 @@ Default: `0.0.0.0`
 
 Type: `object`
 
-Options for [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware).
-
-### setupDevServer
-
-Type: `function`
-
-See [custom server logic](/home#custom-server-logic) for usages.
-
-### proxy
-
-Type: `string` `object`
-
-See [proxy api request](/home#proxy-api-request) for usages.
+Options for [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) (only the options which are not marked as `CLI only`).
 
 ### hotReload
 

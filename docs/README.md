@@ -271,37 +271,6 @@ In template html file which uses [lodash.template](https://lodash.com/docs/4.17.
 <meta name="description" content="<%= htmlWebpackPlugin.options.env.APP_DESCRIPTION %>" />
 ```
 
-### Proxy API request
-
-To tell the development server to serve any `/api/*` request to your API server in development, use the `proxy` options:
-
-```js
-module.exports = {
-  proxy: 'http://localhost:8080/api'
-}
-```
-
-This way, when you fetch `/api/todos` in your app, the development server will proxy your request to `http://localhost:8080/api/todos`.
-
-We use [http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware) under the hood, so the `proxy` option can also be an object:
-
-```js
-module.exports = {
-  proxy: {
-    '/api/foo': 'http://localhost:8080/api',
-    '/api/fake-data': {
-      target: 'http://jsonplaceholder.typicode.com',
-      changeOrigin: true,
-      pathRewrite: {
-        '^/api/fake-data': ''
-      }
-    }
-  }
-}
-```
-
-Keep in mind that proxy only has effect in development.
-
 ### Dev server
 
 Basially it supports all options that're not marked as `CLI only` in [`webpack-dev-server`](https://webpack.js.org/configuration/dev-server/#devserver):
@@ -315,9 +284,27 @@ module.exports = {
 }
 ```
 
+#### Proxy API request
+
+To tell the development server to serve any `/api/*` request to your API server in development, you can set `proxy` in [devServer](/options#devserver) option:
+
+```js
+module.exports = {
+  devServer: {
+    proxy: 'http://localhost:8080/api'
+  }
+}
+```
+
+This way, when you fetch `/api/todos` in your app, the development server will proxy your request to `http://localhost:8080/api/todos`.
+
+<p class="warning">
+  Keep in mind that **proxy** only has effects in development.
+</p>
+
 #### Custom server logic
 
-This is supported by webpack-dev-server, so simply do:
+This is supported by webpack-dev-server too, so simply do:
 
 ```js
 module.exports = {
