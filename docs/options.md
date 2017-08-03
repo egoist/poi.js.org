@@ -148,6 +148,13 @@ module.exports = {
 }
 ```
 
+### sourceMap
+
+Type: `boolean` `string`<br>
+Default: `true`
+
+Generate sourcemaps. When it's `true` we will set internal `webpackConfig.devtool` to `eval-source-map` in dev mode, `inline-source-map` in test mode, and `source-map` in production mode.
+
 ### webpack
 
 Type: `function`
@@ -194,13 +201,6 @@ Type: `boolean`<br>
 Default: `true`
 
 Automatically split vendor code (all imported modules in `node_modules`) into `vendor` chunk.
-
-### sourceMap
-
-Type: `boolean`<br>
-Default: `true`
-
-Generate sourcemaps.
 
 ### minimize
 
