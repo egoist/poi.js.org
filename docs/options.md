@@ -34,6 +34,19 @@ If you're using CLI, it searches for `.babelrc` or `babel` field in `package.jso
 
 You can use this option to override it if you don't want extra config file for babel.
 
+### transformModules
+
+Type: `Array` `string`<br>
+Default: `undefined`
+
+By default we only use `babel-loader` to transform files outside `node_modules` directory, but sometime you need to transform modules which are written in ES2015 or above, then add the module names to `transformModule`:
+
+```js
+{
+  transformModules: ['element-ready', 'p-cancelable']
+}
+```
+
 ### postcss
 
 Type: `Array` `object`
