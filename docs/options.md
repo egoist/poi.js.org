@@ -120,6 +120,15 @@ filename: {
 }
 ```
 
+### hash
+
+Type: `boolean`<br>
+Default: `undefined`
+
+Exclude `[chunkhash]` from [output filename](https://webpack.js.org/configuration/output/#output-filename), you can use [filename](#filename) option to reach the same goal but this one is just simpler.
+
+By default we only *hash* filename when it's built in production mode and option `format` was not set.
+
 ### vue
 
 Type: `object`
