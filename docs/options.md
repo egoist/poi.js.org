@@ -110,7 +110,7 @@ Options for [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-
 Type: `number`<br>
 Default: `10000`
 
-Inline the image (DataURL) into the bundle if it's smaller than this size with `url-loader`, otherwise `file-loader` is used.
+Inline the image (DataURL) into the bundle if it's smaller than this size (in bytes) with `url-loader`, otherwise `file-loader` is used.
 
 `.svg` is always processed by `file-loader` because of [this](https://github.com/facebookincubator/create-react-app/pull/1180).
 
