@@ -149,7 +149,7 @@ Provide custom options for `vue-loader`.
 Type: `boolean` `object` `Array`<br>
 Default: `true`
 
-Options for [copy-webpack-plugin](https://github.com/kevlened/copy-webpack-plugin), by default it will copy `static/*` to `dist/*`
+Options for [copy-webpack-plugin](https://github.com/kevlened/copy-webpack-plugin), it will always copy `static/*` to `dist/*` if `./static` folder exists unless you have `copy` set to false.
 
 ### define
 
