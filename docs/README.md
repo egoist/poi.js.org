@@ -235,7 +235,9 @@ module.exports = {
 
 ### Copy static files
 
-By default, all files inside `./static` folder will be copied to dist folder, you can set `copy` to `false` to disable this.
+By default, all files inside `./static` folder will be copied to the *root* of dist folder, eg: `./static/favicon.ico` will be copied to `./dist/favicon.ico`. You can set `copy` to `false` to disable this.
+
+See more details [here](/options#copy).
 
 ### Define env variables
 
