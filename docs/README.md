@@ -203,7 +203,7 @@ module.exports = {
 }
 ```
 
-Check out the [built-in template](https://github.com/egoist/poi/blob/master/packages/poi/lib/index.ejs) file we use. To disable generating html file, you can set `html` to `false`.
+Check out the [built-in template](https://github.com/egoist/poi/blob/master/packages/poi/lib/index.ejs) file we use, the template supports the [lodash.template](https://lodash.com/docs/4.17.4#template) syntax by default. To disable generating html file, you can set `html` to `false`.
 
 The options for html-webpack-plugin are available in template file as `htmlWebpackPlugin.options` and you can use `htmlWebpackPlugin.options.pkg` to access the data of `package.json`.
 
