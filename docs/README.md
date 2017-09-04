@@ -127,7 +127,7 @@ You can set webpack entry from CLI option or `entry` property in config file. If
 
 ### Code splitting
 
-We enabled code splitting for vendor code and app code by default in production mode, you can set `vendor` option to `false` to disable it. And by default all required modules in `node_modules` will be split.
+We enabled code splitting for vendor code and app code by default in all modes other than `test` mode (poi test), you can set `vendor` option to `false` to disable it. And by default all required modules in `node_modules` will be split.
 
 To lazy-load components, you can use [dynamic import](https://webpack.js.org/guides/code-splitting-async/#dynamic-import-import-) syntax:
 
