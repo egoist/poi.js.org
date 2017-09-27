@@ -4,7 +4,7 @@
 
 - [Deploy to GitHub pages](#deploy-to-github-pages)
 - [Preview the app locally](#preview-the-app-locally)
-- [Serve with Node.js and Express](#serve-with-nodejs-and-express)
+- [Serve with Node.js and Express](#serve-with-node-js-and-express)
 - [Serve with nginx](#serve-with-nginx)
 
 <!-- tocstop -->
