@@ -169,7 +169,7 @@ module.exports = {
 
 Type: `object`
 
-Short hand for the `define` option to define contants under `process.env`. By default `process.env.NODE_ENV` is defined for you, eg:
+Short hand for the `define` option to define constants under `process.env`. By default `process.env.NODE_ENV` is defined for you, eg:
 
 ```js
 module.exports = {

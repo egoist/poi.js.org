@@ -83,3 +83,18 @@ Bascially `lodash.merge`
 
 Parsed CLI arguments.
 
+### poi.run
+
+You can run middlewares in Poi commands, like add a middleware to run some test runner in `poi test`:
+
+```js
+poi.run('test', webpackConfig => {
+  // The `webpackConfig` is the actual webpack config object
+  // Not the webpack-chain instance
+  // This function will be invokes as the last step in the command
+  doSomething()
+})
+```
+
+This middleware function could be sync or return a Promise.
+
