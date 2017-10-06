@@ -85,7 +85,7 @@ Parsed CLI arguments.
 
 ### poi.run
 
-You can run middlewares in Poi commands, like add a middleware to run some test runner in `poi test`:
+You can run middlewares in Poi commands, like adding a middleware to run some test runner in `poi test`:
 
 ```js
 poi.run('test', webpackConfig => {
