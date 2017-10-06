@@ -91,7 +91,7 @@ You can run middlewares in Poi commands, like adding a middleware to run some te
 poi.run('test', webpackConfig => {
   // The `webpackConfig` is the actual webpack config object
   // Not the webpack-chain instance
-  // This function will be invokes as the last step in the command
+  // This function will be invoked as the last step in the command
   doSomething()
 })
 ```
