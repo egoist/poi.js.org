@@ -216,7 +216,8 @@ module.exports = {
   filename: {
     js: '[name].[chunkhash:8].js',
     css: 'style.css',
-    static: 'static/[name].[ext]',
+    images: 'assets/images/[name].[ext]',
+    fonts: 'assets/fonts/[name].[ext]',
     chunk: '[id].chunk.js'
   }
 }
@@ -237,7 +238,7 @@ module.exports = {
 
 By default, all files inside `./static` folder will be copied to the *root* of dist folder, eg: `./static/favicon.ico` will be copied to `./dist/favicon.ico`. You can set `copy` to `false` to disable this.
 
-See more details [here](/options#copy).
+See more details about [staticFolder](/options#staticfolder) and [copy](/options#copy).
 
 ### Define env variables
 

@@ -124,7 +124,8 @@ filename of output files, eg:
 filename: {
   js: 'index.js',
   css: 'style.css',
-  static: 'static/[name].[ext]',
+  fonts: 'assets/fonts/[name].[ext]',
+  images: 'assets/images/[name].[ext]',
   chunk: '[id].chunk.js'
 }
 ```
@@ -144,12 +145,19 @@ Type: `object`
 
 Provide custom options for `vue-loader`.
 
+### staticFolder
+
+Type: `string`<br>
+Default: `static`
+
+Copy files in this folder to the root of `dist` folder, eg: `./static/favicon.ico` will be copied to `./dist/favicon.ico`.
+
 ### copy
 
 Type: `boolean` `object` `Array`<br>
 Default: `true`
 
-Options for [copy-webpack-plugin](https://github.com/kevlened/copy-webpack-plugin), it will always copy `static/*` to `dist/*` if `./static` folder exists unless you have `copy` set to false.
+Options for [copy-webpack-plugin](https://github.com/kevlened/copy-webpack-plugin), it will always [copy `static/*` to `dist/*`](#staticfolder) if `./static` folder exists unless you have `copy` set to false.
 
 ### define
 
