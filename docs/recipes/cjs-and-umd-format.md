@@ -24,3 +24,7 @@ poi build --format umd --module-name Vuex
 ```
 
 When using `umd` format, you need to set `moduleName` so that user can access it via `window.moduleName`.
+
+## Related
+
+- [Article: Bundle and publish your Vue component like a pro](https://medium.com/poi-js/bundle-and-publish-your-vue-componet-like-a-pro-9ce27f9b5f65)
