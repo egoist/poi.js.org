@@ -156,8 +156,6 @@ import './polyfills'
 // ...app code
 ```
 
-[More details](/options#polyfills).
-
 ### Webpack
 
 You can directly mutate webpack config via `webpack` option:
