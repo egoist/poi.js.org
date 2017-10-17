@@ -310,7 +310,7 @@ This is supported by webpack-dev-server too, so simply do:
 ```js
 module.exports = {
   devServer: {
-    setup(app) {
+    before(app) {
       app.get('/api', (req, res) => {
         res.end('This is the API')
       })
