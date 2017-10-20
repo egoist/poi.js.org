@@ -6,4 +6,6 @@ body {
   background: #29d;
   color: white;
   border-radius: 2px;
+  padding: 2px 5px;
+  font-size: 13px;
 }
