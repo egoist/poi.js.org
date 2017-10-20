@@ -22,7 +22,7 @@ Target folder for bundled files
 
 Type: `Object`
 
-If you're using CLI, it searches for `.babelrc` or `babel` field in `package.json`, if none of them exists, it uses default babel config:
+Poi searches for `.babelrc` or `babel` field in `package.json`, if none of them exists, it uses default babel config:
 
 ```js
 {
@@ -51,7 +51,7 @@ By default we only use `babel-loader` to transform files outside `node_modules` 
 
 Type: `Array` `object`
 
-If you're using CLI, it searches for custom postcss config file using [postcss-load-config](https://github.com/michael-ciniawsky/postcss-load-config), and add `autoprefixer` to the top of it when `postcss` is an array or object.
+Poi searches for custom postcss config file using [postcss-load-config](https://github.com/michael-ciniawsky/postcss-load-config), and add `autoprefixer` to the top of it when `postcss` is an array or object.
 
 You can use this option to override it if you don't want extra config file for postcss.
 
@@ -230,6 +230,8 @@ More details about internal namings are coming soon.
 
 ### generateStats
 
+<span class="badge">CLI only</span>
+
 Type: `boolean` `string`
 
 Output webpack stats to `stats.json` or a custom path.
@@ -268,15 +270,21 @@ To disable this, you can set it to `false`, to always enable this even if the fi
 
 ### port
 
+<span class="badge">CLI only</span>
+
 Type: `number`<br>
 Default: `4000`
 
 ### host
 
+<span class="badge">CLI only</span>
+
 Type: `string`<br>
 Default: `0.0.0.0`
 
 ### devServer
+
+<span class="badge">CLI only</span>
 
 Type: `object`
 
