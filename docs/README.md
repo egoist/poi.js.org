@@ -6,16 +6,56 @@
 
 [![NPM version](https://img.shields.io/npm/v/poi.svg?style=flat-square)](https://npmjs.com/package/poi) [![NPM downloads](https://img.shields.io/npm/dm/poi.svg?style=flat-square)](https://npmjs.com/package/poi) [![Build Status](https://img.shields.io/circleci/project/egoist/poi/master.svg?style=flat-square)](https://circleci.com/gh/egoist/poi) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat-square)](https://github.com/egoist/donate)
 
-## tl;dr
+## Introduction
+
+*Develop web apps with no build configuration until you need.*
+
+Start writing an app with a single `.js` file, Poi could handle all the development setups for you, no more configuration hell.
+
+Install *Poi*:
 
 ```bash
-poi src/index.js
-# Run src/index.js in development mode
-poi build src/index.js
-# Build src/index.js in production mode
+# Either globally
+yarn global add poi
+# Or locally (preferred)
+yarn add poi --dev
 ```
 
-Develop web apps with no build configuration until you need.
+Then populating an `index.js`:
+
+```js
+import Vue from 'vue'
+
+new Vue({
+  el: '#app',
+  render() {
+    return <h1>Hello World!</h1>
+  }
+})
+```
+
+> *Note: Poi supports all frameworks but only Vue has built-in support, for other frameworks like React and Svelte please use a [preset](https://github.com/egoist/poi/tree/master/packages) or custom [config](#config-file).*
+
+To develop this file, run `poi` in your terminal and you can open `http://localhost:4000` to preview!
+
+So far we get:
+
+- Automatic transpilation and bundling (with webpack and babel/postcss)
+- Hot code reloading
+- Files in `./static` are copied to dist folder, eg. `static/favicon.ico` to `dist/favicon.ico`
+
+Build app in production mode (optimized and minified):
+
+```bash
+poi build
+```
+
+To change the path of entry file:
+
+```bash
+poi src/my-entry.js # development
+poi build src/my-entry.js # production
+```
 
 ## Modes
 
