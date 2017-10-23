@@ -34,7 +34,7 @@ new Vue({
 })
 ```
 
-> *Note: Poi supports all frameworks but only Vue has built-in support, for other frameworks like React and Svelte please use a [preset](https://github.com/egoist/poi/tree/master/packages) or custom [config](#config-file).*
+> *Note: Poi supports all frameworks but only Vue has built-in support, for other frameworks like React and Svelte etc. please use a [preset](https://github.com/egoist/poi/tree/master/packages) or see how to [configure](#config-file).*
 
 To develop this file, run `poi` in your terminal and you can open `http://localhost:4000` to preview!
 
