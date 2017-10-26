@@ -139,12 +139,6 @@ Exclude `[chunkhash]` from [output filename](https://webpack.js.org/configuratio
 
 By default we only *hash* filename when it's built in production mode and option `format` was not set.
 
-### vue
-
-Type: `object`
-
-Provide custom options for `vue-loader`.
-
 ### staticFolder
 
 Type: `string`<br>
@@ -303,3 +297,17 @@ Type: `string` `Array`<br>
 Default: `client`
 
 Add hot reload support to specific entries.
+
+## Vue-specific options
+
+### vue
+
+Type: `object`
+
+Provide custom options for `vue-loader`.
+
+### templateCompiler
+
+Type: `boolean`
+
+Use Runtime + Compiler build of Vue.js
