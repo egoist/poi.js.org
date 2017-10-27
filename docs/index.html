@@ -15,6 +15,7 @@
   <div id="app"></div>
   <script src="https://cdn.jsdelivr.net/npm/malarkey@1.3.3/dist/malarkey.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docute@3.4.7/dist/docute.js"></script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
   <script src="./assets/landing.js"></script>
   <script>
     docute.init({
@@ -78,5 +79,16 @@
       }
     })
   </script>
+  <!-- Google Analytics -->
+  <script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-54857209-14', 'auto');
+  ga('send', 'pageview');
+  docute.router.afterEach(function (to) {
+    ga('set', 'page', to.fullPath);
+    ga('send', 'pageview');
+  });
+  </script>
+  <!-- End Google Analytics -->
 </body>
 </html>
