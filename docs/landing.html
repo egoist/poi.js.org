@@ -56,6 +56,15 @@
   <p>
     I'm enthusiastic about open source, JavaScript and the web in general, currently I'm dedicating a lot of time to making developing web app fun and easy.
   </p>
+  <p>
+    Some organizations I'm currently contributing to:
+  </p>
+      <ul class="contribs">
+        <li><a href="https://vuejs.org">Vue.js</a> - The Progressive
+      JavaScript Framework</li>
+      <li><a href="https://sao.js.org">SAO</a> - Futuristic scaffolding tool.</li>
+      <li>...you can see more on my <a href="https://github.com/egoist">GitHub profile</a>.</li>
+    </ul>
 </div>
 
 <style>
@@ -206,6 +215,22 @@
     border-radius: 50%;
     background-position: center;
     background-size: cover;
+  }
+
+  .contribs {
+    list-style: none;
+    padding-left: 0;
+    border: 2px solid #000;
+    margin-left: 20px;
+    border-radius: 3px;
+  }
+
+  .contribs li {
+    padding: 10px;
+  }
+
+  .contribs li:not(:last-child) {
+    border-bottom: 2px solid #000;
   }
 
   @media screen and (max-width: 768px) {
