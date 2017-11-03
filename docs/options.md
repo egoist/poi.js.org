@@ -49,6 +49,14 @@ By default we only use `babel-loader` to transform files outside `node_modules` 
 }
 ```
 
+### jsx
+
+Type: `string`<br>
+Default: `vue`<br>
+Possible values: `vue` `react` or any JSX pragma like `h`
+
+Specify a JSX transformer for JSX pragma.
+
 ### postcss
 
 Type: `Array` `object`
