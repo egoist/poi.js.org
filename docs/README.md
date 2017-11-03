@@ -96,11 +96,11 @@ The `require` function but context directory is the path to `node_modules/poi/li
 
 ### Babel
 
-JS files and `script` tags in Vue single-file components are transpiled by Babel. We only use one preset by default: [babel-preset-vue-app](https://github.com/egoist/babel-preset-vue-app).
+JS files and `script` tags in Vue single-file components are transpiled by Babel. We only use one preset by default: [babel-preset-poi](https://github.com/egoist/poi/blob/master/packages/babel-preset-poi/) which supports Vue JSX by default.
 
-poi will use `.babelrc` if it exists, you can also set `babelrc: false` option in babel config to disable itself, check out [related babel docs](https://babeljs.io/docs/usage/api/#options).
+It's easy to switch to another JSX transformer with this preset, e.g. set `jsx: 'react'` in config file to use React JSX. 
 
-Feel free to use [babel-preset-react-app](https://github.com/facebookincubator/create-react-app/blob/master/packages/babel-preset-react-app) or [babel-preset-preact-app](https://github.com/developit/babel-preset-preact) and so on to work with other frameworks.
+poi will use `.babelrc` instead if it exists, you can also set `babelrc: false` option in babel config to disable itself, check out [related babel docs](https://babeljs.io/docs/usage/api/#options).
 
 ### PostCSS
 

@@ -28,11 +28,13 @@ Poi searches for `.babelrc` or `babel` field in `package.json`, if none of them 
 {
   babelrc: false,
   cacheDirectory: true,
-  presets: ['vue-app']
+  presets: [
+    [require.resolve('babel-preset-poi'), { jsx: 'vue' }]
+  ]
 }
 ```
 
-You can use this option to override it if you don't want extra config file for babel.
+You can use this option in Poi config file if you don't want extra config file for babel.
 
 ### transformModules
 
