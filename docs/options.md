@@ -57,6 +57,8 @@ Possible values: `vue` `react` or any JSX pragma like `h`
 
 Specify a JSX transformer for JSX pragma.
 
+Note that this option only works if you don't use a custom babel config, otherwise you should handle JSX transformation yourself :)
+
 ### postcss
 
 Type: `Array` `object`
