@@ -242,6 +242,15 @@ Type: `boolean` `string`
 
 Output webpack stats to `stats.json` or a custom path.
 
+### progress
+
+<span class="badge">CLI only</span>
+
+Type: `boolean`<br>
+Default: `true`
+
+Show progress bar while building, you can disable it by setting it to `false`.
+
 ### vendor
 
 Type: `boolean`<br>
@@ -309,6 +318,13 @@ Type: `string` `Array`<br>
 Default: `client`
 
 Add hot reload support to specific entries.
+
+### restartOnFileChanges
+
+Type: `string` `Array` `boolean`
+Default: It defaults Poi config file if it exists.
+
+Restart Poi while the specified files are modified.
 
 ## Vue-specific options
 
