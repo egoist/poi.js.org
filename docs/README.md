@@ -332,7 +332,9 @@ To tell the development server to serve any `/api/*` request to your API server 
 ```js
 module.exports = {
   devServer: {
-    proxy: 'http://localhost:8080/api'
+    proxy: {
+      '/api': 'http://localhost:8080'
+    }
   }
 }
 ```
