@@ -151,6 +151,12 @@ Exclude `[chunkhash]` from [output filename](https://webpack.js.org/configuratio
 
 By default we only *hash* filename when it's built in production mode and option `format` was not set.
 
+### moduleName
+
+Type: `string`
+
+Only required when `format` is set to `umd`, basically it's the same as [output.library](https://webpack.js.org/configuration/output/#output-library) in raw webpack config.
+
 ### staticFolder
 
 Type: `string`<br>
@@ -280,6 +286,19 @@ Default: `undefined`
 In production mode, we will remove `dist/*` by default when the generated files contain hash like `vendor.f8rbdf92.js`. And there's hash by default for long-term caching purpose.
 
 To disable this, you can set it to `false`, to always enable this even if the filename does not contain hash, you can set it to `true`.
+
+### component
+
+Type: `boolean` `string`
+
+Build your app as a component.
+
+- `boolean`: Build in CommonJS format, output [filename](#filename) will default to current folder name in kebab case.
+- `string`: Build in UMD format, and we set [moduleName](#modulename) to its value. Output filename will default to the moduleName in kebab case.
+
+<p class="tip">
+  Note that [html](#html), [sourceMap](#sourcemap) are also disabled when building as component.
+</p>
 
 ## Development
 
