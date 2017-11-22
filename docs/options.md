@@ -304,21 +304,15 @@ Build your app as a component.
 
 ### port
 
-<span class="badge">CLI only</span>
-
 Type: `number`<br>
 Default: `4000`
 
 ### host
 
-<span class="badge">CLI only</span>
-
 Type: `string`<br>
 Default: `0.0.0.0`
 
 ### devServer
-
-<span class="badge">CLI only</span>
 
 Type: `object`
 
