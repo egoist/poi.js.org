@@ -24,7 +24,7 @@ It is the same as the config in config file, with following addtional options:
 
 Type: `string`<br>
 Default: `undefined`<br>
-Value: `oneOf(['development', 'production', 'watch', 'test'])`
+Value: `oneOf(['development', 'production', 'watch', 'test', 'deploy'])`
 
 ### app.prepare()
 
@@ -40,18 +40,18 @@ It returns a webpack config object, this might be different from the config gene
 
 ### app.build()
 
-Return: `Promise`
+Return: `Promise` which resolves to [stats](https://webpack.js.org/api/node/#stats-object).
 
 Build app in production mode
 
 ### app.watch()
 
-Return: `Promise`
+Return: `Promise` which resolves to webpack watcher instance.
 
 Build app and watch files changes.
 
 ### app.dev()
 
-Return: `Promise`
+Return: `Promise` which resolves to `{ server, host, port }`
 
 Build app and start dev server.
