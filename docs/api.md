@@ -20,7 +20,7 @@ It is the same as the config in config file, with following addtional options:
 
 Type: `string`<br>
 Default: `undefined`<br>
-Value: `oneOf(['development', 'production', 'watch', 'test', 'deploy'])`
+Value: `oneOf(['development', 'production', 'watch', 'test'])`
 
 ### app.prepare()
 
