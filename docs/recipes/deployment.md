@@ -3,8 +3,9 @@
 <!-- toc -->
 
 - [Deploy to GitHub pages](#deploy-to-github-pages)
+- [Deploy to Netlify](#deploy-to-netlify)
 - [Preview the app locally](#preview-the-app-locally)
-- [Serve with Node.js and Express](#serve-with-node-js-and-express)
+- [Serve with Node.js and Express](#serve-with-nodejs-and-express)
 - [Serve with nginx](#serve-with-nginx)
 
 <!-- tocstop -->
@@ -43,6 +44,18 @@ yarn add gh-pages --dev
 ```
 
 Finally run `npm run deploy` and you're all set.
+
+## Deploy to Netlify
+
+Netlify lets you link a GitHub repository to a site. Each time you push to GitHub, Netlify runs a build with your tool of choice and deploys the result to their powerful CDN.
+
+To get started, either enable it on [netlify.com](https://www.netlify.com) or use the CLI tool:
+
+```bash
+npm install netlify-cli -g
+cd ~/my-project
+netlify deploy --path dist
+```
 
 ## Preview the app locally
 
