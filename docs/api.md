@@ -34,7 +34,7 @@ This is automatically called in `app.build()` `app.dev()` `app.watch()`
 
 Return: `WebpackConfig`
 
-It returns a webpack config object, this might be different the actual webpack config we use if you didn't call `app.prepare()` before this.
+It returns a webpack config object, this might be different from the actual webpack config we use if you didn't call `app.prepare()` before this. But it's enough to use with `eslint-plugin-import-resolver-webpack`.
 
 ### app.build()
 
