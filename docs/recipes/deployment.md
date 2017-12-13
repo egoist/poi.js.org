@@ -9,16 +9,16 @@
 
 <!-- tocstop -->
 
-By default in production environment the resource of your app is loaded from root path `/` if `homepage` field was not found in `package.json`. When you're going to deploy the app to a sub path like: `http://example.com/blog`, you need to configure the `homepage` to `/blog/`:
+By default in production environment the resource of your app is loaded from root path `/`. When you're going to deploy the app to a sub path like: `http://example.com/blog`, you need to configure the [`homepage`](/options#homepage) option to `/blog/`:
 
 ```js
-// package.json
-{
-  "homepage": "/blog/"
+// poi.config.js
+module.exports = {
+  homepage: '/blog/'
 }
 ```
 
-You can also configure `homepage` via CLI or config file, but as `package.json` supports [homepage](https://yarnpkg.com/lang/en/docs/package-json/#toc-homepage) field natively, it looks more semantic this way.
+You can also configure `homepage` via CLI flag or under the `poi` key in `package.json`.
 
 **Note**: this will only take effect in production environment, it's always `/` in development mode.
 
@@ -56,11 +56,11 @@ python -m SimpleHTTPServer 9000
 If you're using Node.js, you can use [serve](https://github.com/zeit/serve):
 
 ```bash
-yarn global add serve
+npm i -g serve
 serve dist
 ```
 
-Note that if you're using history mode in client-side router you will need the `--single` mode in `serve`, otherwise it will be a `404` error:
+Note that if you're using browser history API in client-side router you will need the `--single` mode in `serve`, otherwise it will be a `404` error:
 
 ```bash
 serve dist --single
