@@ -54,7 +54,7 @@ To get started, either enable it on [netlify.com](https://www.netlify.com) or us
 ```bash
 npm install netlify-cli -g
 cd ~/my-project
-netlify deploy --path dist
+netlify deploy
 ```
 
 ## Preview the app locally
