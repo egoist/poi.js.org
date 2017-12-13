@@ -314,7 +314,7 @@ In template html file which uses [lodash.template](https://lodash.com/docs/4.17.
 
 ### Dev server
 
-Basially it supports all options that're not marked as `CLI only` in [`webpack-dev-server`](https://webpack.js.org/configuration/dev-server/#devserver):
+Basically it supports all options that're not marked as `CLI only` in [`webpack-dev-server`](https://webpack.js.org/configuration/dev-server/#devserver):
 
 ```js
 module.exports = {
