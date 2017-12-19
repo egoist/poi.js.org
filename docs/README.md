@@ -263,7 +263,7 @@ module.exports = {
 
 ### Extracting CSS
 
-The `extractCSS` option is `true` by default in production mode, however you can also set it manually to overrde:
+The `extractCSS` option is `true` by default in production mode, however you can also set it manually to override:
 
 ```js
 module.exports = {
