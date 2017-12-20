@@ -154,7 +154,7 @@ To enable CSS modules for all CSS files, set `cssModules: true` in config file.
 
 ### Vue
 
-As a fact that we're using `babel-preset-vue-app` by default, you will have built-in support for Vue JSX.
+We're using [babel-preset-poi](https://github.com/egoist/poi/tree/master/packages/babel-preset-poi) so you will have built-in support for Vue JSX by default.
 
 Besides this, single-file component (hot reload, preprocessors, css extraction) is fully supported.
 
@@ -163,7 +163,7 @@ Besides this, single-file component (hot reload, preprocessors, css extraction) 
 Type: `string` `Array` `Object`<br>
 Default: `index.js`
 
-You can set webpack entry from CLI option or `entry` property in config file. If it's an array or string, we add it into `webpackConfig.entry.client` entry, otherwise it will entirely override `webpackConfig.entry`
+You can set webpack entry via CLI arguments or `entry` property in config file. If it's an array or string, we add it into `webpackConfig.entry.client` entry, otherwise it will entirely override `webpackConfig.entry`.
 
 ### Code splitting
 
