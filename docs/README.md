@@ -82,7 +82,7 @@ module.exports = (options, req) => ({
 
 By default the CLI will load `poi.config.js` if it exists. To change the path, you can add `--config [path]` in CLI arguments. 
 
-You can also use `.poirc` or set `poi` property in `package.json` when you only need JSON for configurations. See [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) for all the supported config files.
+You can also set `poi` property in `package.json` when you only need JSON for configurations.
 
 ### Arguments
 
