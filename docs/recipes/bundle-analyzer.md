@@ -9,8 +9,11 @@ With this plugin you can:
 - Find modules that got there by mistake
 - Optimize it!
 
+## Use the preset
 
-## Use as webpack plugin
+Check out [poi-preset-bundle-report](https://github.com/egoist/poi/tree/master/packages/poi-preset-bundle-report).
+
+## Use the webpack plugin directly
 
 To add it in your config file:
 
