@@ -1,6 +1,6 @@
 # Options
 
-Options are available in both CLI arguments and config file.
+Options are available in both CLI flags and config file (CLI flags take higher priority).
 
 ## General
 
