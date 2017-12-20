@@ -7,9 +7,11 @@ Options are available in both CLI flags and config file (CLI flags take higher p
 ### entry
 
 Type: `string` `Array` `object`<br>
-Default: value of pkg.main or `index.js`
+Default: `pkg.main || 'index.js'` (`pkg` is the data of your `package.json`)
 
 The path to entry file.
+
+We only read `pkg.main` if [`format`](#format) option is not set.
 
 ### dist
 
