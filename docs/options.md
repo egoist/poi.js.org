@@ -201,6 +201,14 @@ module.exports = {
 }
 ```
 
+### format
+
+Type: `string`<br>
+Default: `undefined`<br>
+Possible values: `cjs` `umd`
+
+Set the format of output bundle.
+
 ### sourceMap
 
 Type: `boolean` `string`<br>
