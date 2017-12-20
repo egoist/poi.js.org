@@ -232,7 +232,7 @@ Type: `Object` `Array` `boolean`
 ```js
 module.exports = {
   html: {
-    // `pkg` indicates the data in `package.json`
+    // `pkg` is the data from `package.json`
     title: pkg.productName || pkg.name,
     description: pkg.description,
     template: '', // Defaults to $cwd/index.ejs if it exists, otherwise use built-in template
