@@ -334,7 +334,7 @@ Add hot reload support to specific entries.
 
 ### restartOnFileChanges
 
-Type: `string` `Array` `boolean`
+Type: `string` `Array` `boolean`<br>
 Default: It defaults to the path to Poi config file if it exists.
 
 Restart Poi while the specified files are modified.
