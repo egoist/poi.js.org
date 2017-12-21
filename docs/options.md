@@ -297,11 +297,11 @@ In production mode, we will remove `dist/*` by default when the generated files 
 
 To disable this, you can set it to `false`, to always enable this even if the filename does not contain hash, you can set it to `true`.
 
-### component
+### library
 
 Type: `boolean` `string`
 
-Build your app as a component.
+Build your app as a library.
 
 - `boolean`: Build in CommonJS format, output [filename](#filename) will default to current folder name in kebab case.
 - `string`: Build in UMD format, and we set [moduleName](#modulename) to its value. Output filename will default to the moduleName in kebab case.
