@@ -307,7 +307,7 @@ Build your app as a library.
 - `string`: Build in UMD format, and we set [moduleName](#modulename) to its value. Output filename will default to the moduleName in kebab case.
 
 <p class="tip">
-  Note that [html](#html), [sourceMap](#sourcemap) are also disabled when building as component.
+  Note that [html](#html), [sourceMap](#sourcemap) are also disabled when building as library.
 </p>
 
 ## Development
