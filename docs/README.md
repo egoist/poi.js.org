@@ -100,7 +100,7 @@ JS files and `script` tags in Vue single-file components are transpiled by Babel
 
 It's easy to switch to another JSX transformer with this preset, e.g. set `jsx: 'react'` in config file to use React JSX. 
 
-poi will use `.babelrc` instead if it exists, you can also set `babelrc: false` option in babel config to disable itself, check out [related babel docs](https://babeljs.io/docs/usage/api/#options).
+poi will use `.babelrc` instead if it exists, you can also set `babelrc: false` option in babel config file to disable itself when you don't want to use it, check out [related babel docs](https://babeljs.io/docs/usage/api/#options).
 
 ### PostCSS
 
