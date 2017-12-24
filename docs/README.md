@@ -90,6 +90,13 @@ You can also set `poi` property in `package.json` when you only need JSON for co
 
 CLI options.
 
+`options.mode` is automatically injected depending on the command:
+
+- `options.mode === 'development'` in `poi`
+- `options.mode === 'production'` in `poi`
+- `options.mode === 'watch'` in `poi watch`
+- `options.mode === 'test'` in `poi test`
+
 #### req
 
 The `require` function but context directory is the path to `node_modules/poi/lib`, which means you can use it to load poi's dependencies, like `webpack`.
