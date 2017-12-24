@@ -93,7 +93,7 @@ CLI options.
 `options.mode` is automatically injected depending on the command:
 
 - `options.mode === 'development'` in `poi`
-- `options.mode === 'production'` in `poi`
+- `options.mode === 'production'` in `poi build`
 - `options.mode === 'watch'` in `poi watch`
 - `options.mode === 'test'` in `poi test`
 
