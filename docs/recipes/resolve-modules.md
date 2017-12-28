@@ -13,3 +13,27 @@ Instead, as many people use `src` folder as the main directory for their app, yo
 ```js
 import Header from '@/components/Header.vue'
 ```
+
+Please note, the use of alias will make path tips and IDE IntelliSense no longer work.  
+
+You can solve this problem by configuring [jsconfig.json](https://code.visualstudio.com/docs/languages/jsconfig#_using-webpack-aliases) if you're using VSCode:
+ 
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "target": "ES6",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+```
