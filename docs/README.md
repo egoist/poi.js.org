@@ -111,19 +111,9 @@ poi will use `.babelrc` instead if it exists, you can also set `babelrc: false` 
 
 ### PostCSS
 
-Standalone `.css` files and `style` tags in single-file components are transpiled by PostCSS, the only plugin we use by default is `autoprefixer`, and you can use `autoprefixer` option in config file to adjust it, here's the config with default value:
+Standalone `.css` files and `style` tags in single-file components are transpiled by PostCSS, we add `autoprefixer` plugin if you're not using custom postcss config file.
 
-```js
-module.exports = {
-  autoprefixer: {
-    browsers: ['ie > 8', 'last 3 versions']
-  }
-  // to disable autoprefixer
-  // autoprefixer: false
-}
-```
-
-You can use PostCSS config file like `postcss.config.js` or whatever [postcss-load-config](https://github.com/michael-ciniawsky/postcss-load-config) supports. `postcss` option is also available in config file.
+You can use PostCSS config file like `postcss.config.js` or whatever [postcss-load-config](https://github.com/michael-ciniawsky/postcss-load-config) supports. `postcss` option is also available in Poi's config file.
 
 ### Custom CSS preprocessors
 

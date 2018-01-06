@@ -63,11 +63,11 @@ Note that this option only works if you don't use a custom babel config, otherwi
 
 ### postcss
 
-Type: `Array` `object`
+Type: `Array` `object` `function`
 
-Poi searches for custom postcss config file using [postcss-load-config](https://github.com/michael-ciniawsky/postcss-load-config), and add `autoprefixer` to the top of it when `postcss` is an array or object.
+Poi searches for custom postcss config file using [postcss-load-config](https://github.com/michael-ciniawsky/postcss-load-config).
 
-You can use this option to override it if you don't want extra config file for postcss.
+You can use this option to override it if you don't want extra config file for postcss, however it's always recommended to use native postcss config file.
 
 ### autoprefixer
 
@@ -77,11 +77,16 @@ Default:
 
 ```js
 {
-  browsers: ['ie > 8', 'last 4 versions']
+  // browsers defaults to `pkg.browserslist` or:
+  browsers: ['ie > 8', 'last 2 versions']
 }
 ```
 
 Options for [autoprefixer](https://github.com/postcss/autoprefixer), set to `false` to disable it.
+
+<p class="warning">
+  Note that `autoprefixer` will only work when you're NOT using a custom postcss config file like `postcss.config.js`, in that case you should manually add `autoprefixer` in your postcss config file.
+</p>
 
 ### cssModules
 
