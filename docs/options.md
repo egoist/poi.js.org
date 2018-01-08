@@ -36,7 +36,7 @@ Poi searches for `.babelrc` or `babel` field in `package.json`, if none of them 
 }
 ```
 
-You can use this option in Poi config file if you don't want extra config file for babel.
+When `babel` is not set, Poi will search for babel config file in current directory and disable nested babel config files.
 
 ### transformModules
 
