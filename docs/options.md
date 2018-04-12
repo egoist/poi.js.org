@@ -206,6 +206,11 @@ module.exports = {
 }
 ```
 
+<p class="warning">
+  If you already set your own `NODE_ENV` environment variable, Poi will not define your `process.env.NODE_ENV`.
+  `process.env.NODE_ENV` will retain the original value.
+</p>
+
 ### format
 
 Type: `string`<br>
